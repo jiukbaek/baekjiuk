@@ -20,7 +20,7 @@ function SkillsItem({ type, skills }) {
       <div className="skillsItemList">
         {skills.map((skill, index) => (
           <div className="skillItem" key={index}>
-            <img src={`/static/icons/${skill.name}.png`} />
+            <img src={`/static/icons/${skill.name.toLowerCase()}.png`} />
             <div>
               <div className={`skillLevel level${skill.level}`}>
                 {getLevel(skill.level)}
