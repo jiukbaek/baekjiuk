@@ -1,0 +1,45 @@
+@import "./mixin.scss";
+
+$gray: #888888;
+footer {
+  background: #171826;
+  color: #e9e9e9;
+  padding: 30px 0;
+  & .footerWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    & .division {
+      height: 1px;
+      background: $gray;
+      margin-top: 10px;
+    }
+    & .footerTop {
+      font-size: 25px;
+      & .footerTopInfo {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+    & .footerGithub {
+      float: right;
+      font-size: 30px;
+      line-height: 56px;
+      & a {
+        color: $gray;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    & .footerBottom {
+      font-size: 13px;
+      color: $gray;
+    }
+  }
+}
+
+@include mobile {
+  .footerWrapper {
+    padding: 0px 10px;
+  }
+}

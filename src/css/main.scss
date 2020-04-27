@@ -1,0 +1,296 @@
+@import "./mixin.scss";
+
+$light-gray: #f5f5f5;
+.mainPageWrapper {
+  & .mainBannerWrppaer {
+    background: $light-gray;
+    padding: 13vw 0px;
+    margin: 0 auto;
+    background-image: url("/static/blurbju.png");
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position-x: -20%;
+    background-position-y: 10%;
+    & .mainBannerText {
+      font-size: 7vw;
+      font-weight: 400;
+      padding-left: 45vw;
+    }
+  }
+
+  & .mainInnerWrapper {
+    padding: 4vw 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  & .mainSectionSubTitle {
+    padding: 0 0 2vw 0;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 700;
+  }
+
+  & .mainAboutWrapper {
+    & .mainInnerWrapper {
+      & .aboutContentWrapper {
+        padding: 2vw 1vw;
+        display: flex;
+        & .aboutPicture {
+          & img {
+            width: 15vw;
+          }
+        }
+        & .aboutContent {
+          padding-left: 4vw;
+          font-size: 16px;
+          & .aboutContentAccent {
+            font-weight: bold;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  & .mainSkillWrapper {
+    background: $light-gray;
+    & .mainInnerWrapper {
+      & .skillContent {
+        & .skillContentText {
+          padding: 0 0 3vw 0;
+          text-align: center;
+          font-size: 14px;
+          & > p {
+            margin: 5px 0px;
+          }
+        }
+
+        & .skillContentList {
+          display: flex;
+          justify-content: space-around;
+
+          & .skillsItem {
+            width: 25%;
+            & .skillsItemTop {
+              text-align: center;
+              font-size: 20px;
+            }
+          }
+
+          & .skillsItemList {
+            & .skillItem {
+              margin: 0 auto;
+              width: 150px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 5px 0px;
+              & img {
+                float: left;
+                margin-right: 10px;
+              }
+              & .skillLevel {
+                font-size: 14px;
+                &.level1 {
+                  color: red;
+                }
+                &.level2 {
+                  color: blue;
+                }
+              }
+              & .skillName {
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .mainProjectWrapper {
+    & .mainInnerWrapper {
+      & .projectContent {
+        & .projectContentTop {
+          text-align: center;
+          font-size: 14px;
+          padding-bottom: 4vw;
+          & > p {
+            margin: 5px 0px;
+          }
+        }
+        & .projectContentList {
+          & .projectItem {
+            width: 80%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            border: solid 1px #eaeaef;
+            & .projectItemThumnail {
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 40%;
+              height: 100%;
+              & img {
+                float: left;
+                max-width: 90%;
+                max-height: 80%;
+              }
+            }
+
+            & .projectItemInfo {
+              & .projectItemType {
+                font-size: 13px;
+              }
+              & .projectItemTitle {
+                font-size: 18px;
+              }
+              & .projectItemDate {
+                font-size: 16px;
+              }
+              & .projectItemDetail {
+                padding: 40px 0 0 0;
+
+                & > a {
+                  padding: 6px 12px;
+                  border: solid 1px #5c5c5c;
+                  border-radius: 5px;
+                  font-size: 13px;
+                  text-decoration: none;
+
+                  &:hover {
+                    border: solid 1px #155bff;
+                    background: #155bff;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .mainPageWrapper {
+    & .mainBannerWrppaer {
+      padding: 46vw 0px;
+      background-size: 150% auto;
+      background-position-x: 130%;
+      background-position-y: 2%;
+      & .mainBannerText {
+        font-size: 10vw;
+        font-weight: 700;
+        padding-left: 37vw;
+      }
+    }
+    & .mainSectionSubTitle {
+      font-size: 8vw;
+    }
+
+    & .mainAboutWrapper {
+      & .mainInnerWrapper {
+        & .aboutContentWrapper {
+          padding: 0;
+          flex-direction: column;
+          & .aboutPicture {
+            & img {
+              display: block;
+              width: 40%;
+              margin: 0 auto;
+            }
+          }
+          & .aboutContent {
+            padding-top: 15px;
+            padding-left: 0;
+            font-size: 14px;
+            & .aboutContentAccent {
+              font-size: 18px;
+              text-align: center;
+            }
+            & p {
+              width: 90%;
+              margin: 5px auto;
+            }
+          }
+        }
+      }
+    }
+
+    & .mainSkillWrapper {
+      & .mainInnerWrapper {
+        & .skillContent {
+          & .skillContentText {
+            & > p {
+              width: 90%;
+              margin: 5px auto;
+            }
+          }
+
+          & .skillContentList {
+            flex-direction: column;
+            align-items: center;
+            & .skillsItem {
+              width: 90%;
+            }
+
+            & .skillsItemList {
+              margin: 15px 0px;
+              & .skillItem {
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                & img {
+                  float: none;
+                  margin: 0;
+                }
+                & .skillLevel {
+                  font-size: 13px;
+                }
+                & .skillName {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .mainProjectWrapper {
+      & .mainInnerWrapper {
+        & .projectContent {
+          & .projectContentTop {
+            & > p {
+              width: 90%;
+              margin: 0 auto;
+            }
+          }
+
+          & .projectContentList {
+            & .projectItem {
+              flex-direction: column;
+              padding: 20px;
+
+              & .projectItemInfo {
+                width: 100%;
+                & .projectItemDetail {
+                  padding: 20px 0 0 0;
+                  & > a {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "./mixin.scss";
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+a {
+  &,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+@include mobile {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+}

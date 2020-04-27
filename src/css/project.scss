@@ -1,0 +1,65 @@
+@import "./mixin.scss";
+
+.projectDetailWrapper {
+  max-width: 1200px;
+  padding: 80px 0px;
+  margin: 0 auto;
+
+  & .projectDetailType {
+    font-size: 14px;
+  }
+  & .projectDetailTitle {
+    font-size: 30px;
+    margin: 8px 0;
+  }
+  & .projectDetailDate {
+    font-size: 15px;
+  }
+
+  & .projectDetailLink {
+    margin: 10px 0;
+    & > div {
+      width: 18px;
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    & a {
+      margin-right: 5px;
+      color: blue;
+    }
+  }
+
+  & .projectDetailContent {
+    padding: 20px 0px;
+    border-bottom: solid 1px #eaeaef;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+  & .projectDetailSkills {
+    & .projectSkillsLabel {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    & .projectSkillItems {
+      & > span {
+        display: block;
+        float: left;
+        font-size: 14px;
+        margin: 2px;
+        padding: 6px 8px;
+        border: solid 1px #b9b9b9;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .projectDetailWrapper {
+    padding: 50px 15px;
+  }
+}
